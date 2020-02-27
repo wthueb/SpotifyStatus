@@ -17,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		B10F831024084442005C8E3D /* status_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = status_icon.png; sourceTree = "<group>"; };
+		B12F706F24084EDB00464623 /* SpotifyStatus.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = SpotifyStatus.entitlements; sourceTree = "<group>"; };
 		B19540392407C67700250156 /* SpotifyStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifyStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B195403C2407C67700250156 /* SpotifyStatusDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotifyStatusDelegate.h; sourceTree = "<group>"; };
 		B195403D2407C67700250156 /* SpotifyStatusDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpotifyStatusDelegate.m; sourceTree = "<group>"; };
@@ -63,6 +64,7 @@
 				B195403D2407C67700250156 /* SpotifyStatusDelegate.m */,
 				B19540412407C67A00250156 /* MainMenu.xib */,
 				B19540442407C67A00250156 /* Info.plist */,
+				B12F706F24084EDB00464623 /* SpotifyStatus.entitlements */,
 				B195403F2407C67A00250156 /* Assets.xcassets */,
 				B10F831024084442005C8E3D /* status_icon.png */,
 				B19540452407C67A00250156 /* main.m */,
@@ -280,7 +282,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = SpotifyStatus/SpotifyStatus.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,7 +304,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = SpotifyStatus/SpotifyStatus.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
