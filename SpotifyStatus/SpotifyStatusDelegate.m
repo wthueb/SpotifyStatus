@@ -18,14 +18,14 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification* __unused)aNotification
 {
-    self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-    
-    NSMenu* menu = [[NSMenu alloc] initWithTitle:@""];
-    
     // hide dock icon
     [NSApp setActivationPolicy: NSApplicationActivationPolicyAccessory];
     
+    NSMenu* menu = [[NSMenu alloc] initWithTitle:@""];
+    
     [menu addItemWithTitle:NSLocalizedString(@"quit", nil) action:@selector(quit) keyEquivalent:@"q"];
+    
+    self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     
     [self.statusItem setMenu:menu];
     
@@ -45,7 +45,6 @@
 
     printf("finished loading\n");
     
-    [self setStatusItemTitle];
     [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(setStatusItemTitle) userInfo:nil repeats:YES];
 }
 
@@ -70,8 +69,6 @@
     {
         NSImage* image = [NSImage imageNamed:@"status_icon"];
         
-        //[image setTemplate:true];
-        
         self.statusItem.button.image = image;
         self.statusItem.button.title = @"";
     }
@@ -83,9 +80,7 @@
     
     NSAppleScript* appleScript = [[NSAppleScript alloc] initWithSource:command];
     
-    NSDictionary* dict = nil;
-    
-    NSAppleEventDescriptor* eventDescriptor = [appleScript executeAndReturnError:&dict];
+    NSAppleEventDescriptor* eventDescriptor = [appleScript executeAndReturnError:nil];
     
     return eventDescriptor;
 }
