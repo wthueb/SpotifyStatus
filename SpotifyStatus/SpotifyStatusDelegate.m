@@ -18,9 +18,6 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification* __unused)aNotification
 {
-    // hide dock icon
-    [NSApp setActivationPolicy: NSApplicationActivationPolicyAccessory];
-    
     NSMenu* menu = [[NSMenu alloc] initWithTitle:@""];
     
     [menu addItemWithTitle:NSLocalizedString(@"quit", nil) action:@selector(quit) keyEquivalent:@"q"];
@@ -87,9 +84,9 @@
 
 - (BOOL)isPlaying
 {
-    NSString* playerStateConstant = [[self executeAppleScript:@"get player state"] stringValue];
+    NSString* playerStateConstant = [[self executeAppleScript:@"get player state as text"] stringValue];
     
-    if ([playerStateConstant isEqualToString:@"kPSP"])
+    if ([playerStateConstant isEqualToString:@"playing"])
         return YES;
     
     return NO;
