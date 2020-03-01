@@ -29,7 +29,7 @@
 	<key>LSUIElement</key>
 	<true/>
 	<key>NSAppleEventsUsageDescription</key>
-	<string>Give SpotifyStatus access to the Spotify app in order to get the track information.</string>
+	<string>Give SpotifyStatus permission to control this app.</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2020 William Huebner. All rights reserved.</string>
 	<key>NSMainNibFile</key>
